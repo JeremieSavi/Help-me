@@ -32,6 +32,7 @@ const Signup = () => {
         formData.email,
         formData.password
       );
+     
       const user = userCredential.user;
 
       // 2. Enregistrement des infos complémentaires dans Firestore
@@ -45,7 +46,7 @@ const Signup = () => {
         createdAt: new Date().toISOString()
       });
 
-      navigate('/dashboard'); // Redirection vers le tableau de bord
+     navigate('/dashboard'); // Redirection vers le tableau de bord
     } catch (error) {
       alert("Erreur lors de l'inscription : " + error.message);
     } finally {

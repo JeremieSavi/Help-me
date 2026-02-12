@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { auth } from '../../services/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate, Link } from 'react-router-dom';
-import { Mail, Lock, Loader2, LogIn, ArrowRight } from 'lucide-react';
+import { Mail, Lock, Loader2, LogIn, ArrowRight, BatteryFull } from 'lucide-react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -40,7 +40,7 @@ const Login = () => {
           </div>
           
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-800">Bon retour !</h2>
+            <h2 className="text-3xl font-bold text-slate-800">Bon retour !  </h2>
             <p className="text-slate-500 mt-2">Connectez-vous pour aider vos voisins</p>
           </div>
 
@@ -50,6 +50,7 @@ const Login = () => {
             <div className="relative">
               <label className="text-sm font-semibold text-slate-700 ml-1">Email</label>
               <div className="relative mt-1">
+               
                 <Mail className="absolute left-3 top-3 text-slate-400 w-5 h-5" />
                 <input
                   type="email"
